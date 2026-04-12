@@ -1,2 +1,5 @@
 node_modules/
 .next/
+
+# Exceeds GitHub single-file limit (100MB)
+4151-Oaktree-Drive.zip

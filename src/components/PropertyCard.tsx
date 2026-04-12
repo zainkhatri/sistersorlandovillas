@@ -17,17 +17,12 @@ export default function PropertyCard({ property }: { property: Property }) {
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
         <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-6">
-          <p className="text-sm font-medium text-gold">{property.resort}</p>
-          <h3 className="mt-1 text-xl font-bold text-white">
-            {property.name}
-          </h3>
+          <h3 className="text-xl font-bold text-white">{property.name}</h3>
         </div>
       </div>
 
       <div className="p-6">
-        <p className="text-sm text-gray-600">{property.tagline}</p>
-
-        <div className="mt-4 flex flex-wrap gap-4 text-sm text-gray-500">
+        <div className="flex flex-wrap gap-4 text-sm text-gray-500">
           <span className="flex items-center gap-1.5">
             <BedIcon />
             {property.bedrooms} Bed
@@ -42,12 +37,6 @@ export default function PropertyCard({ property }: { property: Property }) {
           </span>
         </div>
 
-        <div className="mt-4 flex items-center justify-between">
-          <span className="font-semibold text-navy">{property.pricePerNight}</span>
-          <span className="text-sm font-medium text-gold group-hover:underline">
-            View Details &rarr;
-          </span>
-        </div>
       </div>
     </Link>
   );

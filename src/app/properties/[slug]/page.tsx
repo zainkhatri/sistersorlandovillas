@@ -18,10 +18,10 @@ export async function generateMetadata({
   if (!property) return {};
 
   return {
-    title: `${property.name} | FloridaVillas`,
+    title: `${property.name} | SisterOrlandoVillas`,
     description: property.description,
     openGraph: {
-      title: `${property.name} - ${property.tagline}`,
+      title: `${property.name} | SisterOrlandoVillas`,
       description: property.description,
       images: [{ url: property.heroImage, width: 1200, height: 630 }],
     },
@@ -63,8 +63,7 @@ export default async function PropertyPage({
               </svg>
               All Properties
             </Link>
-            <p className="text-sm font-medium text-gold">{property.resort}</p>
-            <h1 className="mt-1 font-[family-name:var(--font-serif)] text-3xl font-bold text-white sm:text-4xl md:text-5xl">
+            <h1 className="font-[family-name:var(--font-serif)] text-3xl font-bold text-white sm:text-4xl md:text-5xl">
               {property.name}
             </h1>
             <div className="mt-3 flex flex-wrap gap-4 text-sm text-sand-200">
@@ -176,12 +175,7 @@ export default async function PropertyPage({
           {/* Sidebar - Booking Card */}
           <div className="lg:col-span-1">
             <div className="sticky top-24 rounded-2xl border border-sand-200 bg-white p-6 shadow-lg">
-              <p className="text-2xl font-bold text-navy">
-                {property.pricePerNight}
-              </p>
-              <p className="text-sm text-gray-500">
-                {property.nearDisney}
-              </p>
+              <p className="text-sm text-gray-500">{property.nearDisney}</p>
 
               <div className="mt-6 space-y-3">
                 <Link

@@ -15,18 +15,18 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "FloridaVillas | Luxury Vacation Rentals Near Disney World",
+  title: "SisterOrlandoVillas | Luxury Vacation Rentals Near Disney World",
   description:
     "Book direct and save on luxury vacation villas near Walt Disney World. Private pools, game rooms, themed bedrooms, and resort amenities. 4-6 bedroom homes sleeping up to 12 guests.",
   openGraph: {
-    title: "FloridaVillas | Luxury Vacation Rentals Near Disney World",
+    title: "SisterOrlandoVillas | Luxury Vacation Rentals Near Disney World",
     description:
       "Luxury vacation villas with private pools near Disney World. Book direct and save. 4-6 bedrooms, game rooms, resort amenities.",
     type: "website",
     locale: "en_US",
     images: [
       {
-        url: "https://www.luxurysolterravillas.com/images/resort-pool-sunset.jpg",
+        url: "/globe.svg",
         width: 1200,
         height: 630,
         alt: "Luxury villa pool at sunset near Disney World",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "FloridaVillas | Luxury Vacation Rentals Near Disney World",
+    title: "SisterOrlandoVillas | Luxury Vacation Rentals Near Disney World",
     description:
       "Luxury vacation villas with private pools near Disney World. Book direct and save.",
   },

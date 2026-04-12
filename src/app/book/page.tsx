@@ -3,7 +3,7 @@ import { properties } from "@/data/properties";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Book Your Stay | FloridaVillas",
+  title: "Book Your Stay | SisterOrlandoVillas",
   description:
     "Check availability and book your luxury vacation villa near Disney World. Secure payment processing through Stripe.",
 };

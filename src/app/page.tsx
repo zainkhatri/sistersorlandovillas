@@ -9,11 +9,14 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative h-screen min-h-[600px]">
         <Image
-          src="https://www.luxurysolterravillas.com/images/resort-pool-sunset.jpg"
-          alt="Resort pool at sunset"
+          src="/images/hero-universal-orlando.jpg"
+          alt="Universal Orlando Resort — Universal globe, lagoon, and Islands of Adventure at sunset"
           fill
-          className="object-cover"
+          className="object-cover object-center [transform:translateZ(0)]"
           priority
+          quality={100}
+          sizes="100vw"
+          unoptimized
         />
         <div className="absolute inset-0 bg-gradient-to-b from-navy/70 via-navy/40 to-navy/80" />
         <div className="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center">
@@ -52,23 +55,23 @@ export default function Home() {
       </section>
 
       {/* Trust Bar */}
-      <section className="bg-navy py-6">
-        <div className="mx-auto flex max-w-5xl flex-wrap items-center justify-center gap-8 px-6 text-sm text-sand-300">
+      <section className="bg-[#5DA9E9] py-6">
+        <div className="mx-auto flex max-w-5xl flex-wrap items-center justify-center gap-8 px-6 text-sm text-white">
           <span className="flex items-center gap-2">
             <StarIcon />
             4.96 Average Rating
           </span>
-          <span className="hidden h-4 w-px bg-sand-500 sm:block" />
+          <span className="hidden h-4 w-px bg-white/40 sm:block" />
           <span className="flex items-center gap-2">
             <ShieldIcon />
             Superhost Status
           </span>
-          <span className="hidden h-4 w-px bg-sand-500 sm:block" />
+          <span className="hidden h-4 w-px bg-white/40 sm:block" />
           <span className="flex items-center gap-2">
             <KeyIcon />
             Book Direct & Save
           </span>
-          <span className="hidden h-4 w-px bg-sand-500 sm:block" />
+          <span className="hidden h-4 w-px bg-white/40 sm:block" />
           <span className="flex items-center gap-2">
             <LocationIcon />
             Minutes from Disney
@@ -101,51 +104,98 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Why Book Direct */}
-      <section className="bg-sand-50 py-20">
+      {/* Amenities */}
+      <section id="amenities" className="scroll-mt-20 border-t border-sand-200 bg-warm-white py-20">
         <div className="mx-auto max-w-7xl px-6">
           <div className="text-center">
             <p className="text-sm font-medium uppercase tracking-widest text-gold">
-              Why Book With Us
+              Amenities
             </p>
             <h2 className="mt-2 font-[family-name:var(--font-serif)] text-3xl font-bold text-navy sm:text-4xl">
-              Book Direct & Save
+              Everything You Need for Your Stay
             </h2>
+            <p className="mx-auto mt-4 max-w-2xl text-gray-600">
+              Our villas include resort-style perks at home plus access to
+              community amenities—pools, lazy rivers, fitness centers, and more.
+            </p>
+          </div>
+          <ul className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {[
+              "Private heated pools & spas",
+              "Game rooms & entertainment spaces",
+              "Fully equipped kitchens",
+              "Themed & family-friendly bedrooms",
+              "Smart lock entry & secure WiFi",
+              "Resort pools, lazy rivers & slides",
+              "Fitness centers & sports courts",
+              "Minutes from Walt Disney World",
+            ].map((item) => (
+              <li
+                key={item}
+                className="flex items-start gap-3 rounded-xl border border-sand-200 bg-sand-50/80 px-5 py-4 text-left text-navy"
+              >
+                <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-gold/20 text-xs font-bold text-[#8A6B2E]">
+                  ✓
+                </span>
+                <span className="text-sm leading-snug">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      {/* Reviews */}
+      <section id="reviews" className="scroll-mt-20 border-t border-sand-200 bg-warm-white py-20">
+        <div className="mx-auto max-w-7xl px-6">
+          <div className="text-center">
+            <p className="text-sm font-medium uppercase tracking-widest text-gold">
+              Guest Reviews
+            </p>
+            <h2 className="mt-2 font-[family-name:var(--font-serif)] text-3xl font-bold text-navy sm:text-4xl">
+              Loved by Families Like Yours
+            </h2>
+            <p className="mx-auto mt-4 max-w-2xl text-gray-600">
+              Real feedback from guests who stayed at our villas—rated 4.96
+              across 184+ five-star reviews.
+            </p>
+            <div className="mt-4 flex items-center justify-center gap-1 text-[#8A6B2E]" aria-hidden>
+              {[1, 2, 3, 4, 5].map((i) => (
+                <svg key={i} className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                </svg>
+              ))}
+              <span className="ml-2 text-sm font-medium text-navy">4.96 average</span>
+            </div>
           </div>
 
-          <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-            <BenefitCard
-              title="Best Price Guarantee"
-              description="Save 10-15% compared to booking through Airbnb or VRBO. No middleman fees."
-              icon={<PriceIcon />}
+          <div className="mt-12 grid gap-8 md:grid-cols-3">
+            <ReviewCard
+              quote="The pool and game room kept the kids happy every evening after the parks. House was spotless and the host was incredibly responsive."
+              name="Jennifer M."
+              detail="Family of 5 · Texas"
             />
-            <BenefitCard
-              title="Flexible Cancellation"
-              description="Plans change. We offer flexible cancellation policies for your peace of mind."
-              icon={<CalendarIcon />}
+            <ReviewCard
+              quote="Best vacation rental we&apos;ve booked in Orlando. Themed rooms were a hit, kitchen had everything we needed, and check-in was seamless."
+              name="David & Sarah K."
+              detail="Family of 6 · Illinois"
             />
-            <BenefitCard
-              title="Direct Communication"
-              description="Talk directly with your host. Faster responses, personalized recommendations."
-              icon={<ChatIcon />}
-            />
-            <BenefitCard
-              title="Secure Payments"
-              description="Safe and secure payment processing through Stripe. Your data is protected."
-              icon={<LockIcon />}
+            <ReviewCard
+              quote="Location is perfect for Disney days. Resort amenities were a bonus—we loved the lazy river. Already planning our return trip."
+              name="Amanda R."
+              detail="Family of 4 · Georgia"
             />
           </div>
         </div>
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-20">
+      <section id="about" className="scroll-mt-20 border-t border-sand-200 bg-warm-white py-20">
         <div className="mx-auto max-w-7xl px-6">
           <div className="grid items-center gap-12 lg:grid-cols-2">
-            <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
+            <div className="relative aspect-[4/3] overflow-hidden rounded-2xl ring-1 ring-sand-200">
               <Image
-                src="https://www.luxurysolterravillas.com/images/resort-aerial-lazy-river.jpg"
-                alt="Solterra Resort aerial view"
+                src="/images/solterra/01-BPT_0592And4more.jpg"
+                alt="Luxury vacation villa living space at Solterra Resort"
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 50vw"
@@ -159,10 +209,11 @@ export default function Home() {
                 Luxury Villas, Personal Touch
               </h2>
               <p className="mt-6 leading-relaxed text-gray-600">
-                We manage a collection of premium vacation villas in
-                Orlando&apos;s best resort communities. Each property is
-                personally maintained to the highest standards, with designer
-                interiors, private pools, and family-friendly amenities.
+                We manage two premium vacation villas in Orlando&apos;s most
+                popular resort communities: Solterra Resort and
+                ChampionsGate Resort. Each property is personally maintained to
+                the highest standards, with designer interiors, private pools,
+                and family-friendly amenities.
               </p>
               <p className="mt-4 leading-relaxed text-gray-600">
                 Located just minutes from Walt Disney World, Universal Studios,
@@ -173,7 +224,7 @@ export default function Home() {
               </p>
               <div className="mt-8 grid grid-cols-3 gap-4 text-center">
                 <div>
-                  <p className="text-3xl font-bold text-navy">4</p>
+                  <p className="text-3xl font-bold text-navy">2</p>
                   <p className="mt-1 text-sm text-gray-500">Luxury Villas</p>
                 </div>
                 <div>
@@ -187,19 +238,44 @@ export default function Home() {
               </div>
             </div>
           </div>
+
+          <div className="mt-16 lg:mt-20">
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
+              <BenefitCard
+                title="Best Price Guarantee"
+                description="Save 10-15% compared to booking through Airbnb or VRBO. No middleman fees."
+                icon={<PriceIcon />}
+              />
+              <BenefitCard
+                title="Flexible Cancellation"
+                description="Plans change. We offer flexible cancellation policies for your peace of mind."
+                icon={<CalendarIcon />}
+              />
+              <BenefitCard
+                title="Direct Communication"
+                description="Talk directly with your host. Faster responses, personalized recommendations."
+                icon={<ChatIcon />}
+              />
+              <BenefitCard
+                title="Secure Payments"
+                description="Safe and secure payment processing through Stripe. Your data is protected."
+                icon={<LockIcon />}
+              />
+            </div>
+          </div>
         </div>
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="bg-navy py-20">
+      <section id="contact" className="bg-[#5DA9E9] py-20">
         <div className="mx-auto max-w-3xl px-6 text-center">
-          <p className="text-sm font-medium uppercase tracking-widest text-gold">
+          <p className="text-sm font-medium uppercase tracking-widest text-[#8A6B2E]">
             Get In Touch
           </p>
           <h2 className="mt-2 font-[family-name:var(--font-serif)] text-3xl font-bold text-white sm:text-4xl">
             Ready to Book Your Stay?
           </h2>
-          <p className="mt-4 text-sand-300">
+          <p className="mt-4 text-white/90">
             Have questions about our properties? Want to check availability?
             We&apos;d love to hear from you.
           </p>
@@ -226,6 +302,33 @@ export default function Home() {
   );
 }
 
+function ReviewCard({
+  quote,
+  name,
+  detail,
+}: {
+  quote: string;
+  name: string;
+  detail: string;
+}) {
+  return (
+    <blockquote className="flex h-full flex-col rounded-2xl border border-sand-200 bg-sand-50/80 p-8 shadow-sm">
+      <div className="flex gap-0.5 text-gold" aria-hidden>
+        {[1, 2, 3, 4, 5].map((i) => (
+          <svg key={i} className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+          </svg>
+        ))}
+      </div>
+      <p className="mt-4 flex-1 text-sm leading-relaxed text-gray-700">&ldquo;{quote}&rdquo;</p>
+      <footer className="mt-6 border-t border-sand-200 pt-4">
+        <p className="font-semibold text-navy">{name}</p>
+        <p className="mt-0.5 text-xs text-gray-500">{detail}</p>
+      </footer>
+    </blockquote>
+  );
+}
+
 function BenefitCard({
   title,
   description,
@@ -236,8 +339,8 @@ function BenefitCard({
   icon: React.ReactNode;
 }) {
   return (
-    <div className="rounded-2xl bg-white p-8 shadow-sm">
-      <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gold/10 text-gold">
+    <div className="flex h-full flex-col rounded-2xl border border-sand-200 bg-white p-6 shadow-[0_1px_2px_rgba(26,39,68,0.04)] sm:p-8">
+      <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gold/10 text-gold">
         {icon}
       </div>
       <h3 className="mt-4 font-semibold text-navy">{title}</h3>
@@ -248,7 +351,7 @@ function BenefitCard({
 
 function StarIcon() {
   return (
-    <svg className="h-4 w-4 text-gold" fill="currentColor" viewBox="0 0 24 24">
+    <svg className="h-4 w-4 text-[#8A6B2E]" fill="currentColor" viewBox="0 0 24 24">
       <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
     </svg>
   );
@@ -256,7 +359,7 @@ function StarIcon() {
 
 function ShieldIcon() {
   return (
-    <svg className="h-4 w-4 text-gold" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+    <svg className="h-4 w-4 text-[#8A6B2E]" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
       <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
     </svg>
   );
@@ -264,7 +367,7 @@ function ShieldIcon() {
 
 function KeyIcon() {
   return (
-    <svg className="h-4 w-4 text-gold" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+    <svg className="h-4 w-4 text-[#8A6B2E]" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
       <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 5.25a3 3 0 013 3m3 0a6 6 0 01-7.029 5.912c-.563-.097-1.159.026-1.563.43L10.5 17.25H8.25v2.25H6v2.25H2.25v-2.818c0-.597.237-1.17.659-1.591l6.499-6.499c.404-.404.527-1 .43-1.563A6 6 0 1121.75 8.25z" />
     </svg>
   );
@@ -272,7 +375,7 @@ function KeyIcon() {
 
 function LocationIcon() {
   return (
-    <svg className="h-4 w-4 text-gold" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+    <svg className="h-4 w-4 text-[#8A6B2E]" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
       <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
       <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
     </svg>
