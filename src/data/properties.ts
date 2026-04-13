@@ -23,8 +23,37 @@ export interface Property {
 
 const BREEZ_CDN = "https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1920,fit=crop/A1a594pqkwhDOMJM";
 const BREEZ_MED = "https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=768,fit=crop/A1a594pqkwhDOMJM";
-const LSV = "https://www.luxurysolterravillas.com/images";
 const BW = "https://www.brightwatervilla.co.uk";
+
+const SOLTERRA_LOCAL = [
+  "/images/solterra/01-BPT_0592And4more.jpg",
+  "/images/solterra/02-BPT_0522And4more.jpg",
+  "/images/solterra/03-BPT_0527And4more.jpg",
+  "/images/solterra/04-BPT_0532And4more.jpg",
+  "/images/solterra/05-BPT_0537And4more.jpg",
+  "/images/solterra/06-BPT_0542And4more.jpg",
+  "/images/solterra/07-BPT_0552And4more.jpg",
+  "/images/solterra/08-BPT_0562And4more.jpg",
+  "/images/solterra/09-BPT_0572And4more.jpg",
+  "/images/solterra/10-BPT_0577And4more.jpg",
+  "/images/solterra/11-BPT_0582And4more.jpg",
+  "/images/solterra/12-BPT_0602And4more.jpg",
+];
+
+const CHAMPIONSGATE_LOCAL = [
+  "/images/championsgate/IMG_8993.PNG",
+  "/images/championsgate/IMG_8994.PNG",
+  "/images/championsgate/IMG_8995.PNG",
+  "/images/championsgate/IMG_8996.PNG",
+  "/images/championsgate/IMG_8997.PNG",
+  "/images/championsgate/IMG_8998.PNG",
+  "/images/championsgate/IMG_8999.PNG",
+  "/images/championsgate/IMG_9001.PNG",
+  "/images/championsgate/IMG_9002.PNG",
+  "/images/championsgate/IMG_9003.PNG",
+  "/images/championsgate/IMG_9004.PNG",
+  "/images/championsgate/IMG_9005.PNG",
+];
 
 export const properties: Property[] = [
   {
@@ -40,21 +69,8 @@ export const properties: Property[] = [
     guests: 12,
     sqft: 3300,
     pricePerNight: "From $199/night",
-    heroImage: `${LSV}/sbv-sunset-pool.jpg`,
-    images: [
-      `${LSV}/sbv-living-room.jpg`,
-      `${LSV}/sbv-living-dining.jpg`,
-      `${LSV}/sbv-kitchen.jpg`,
-      `${LSV}/sbv-master-bedroom.jpg`,
-      `${LSV}/sbv-master-bath.jpg`,
-      `${LSV}/sbv-navy-master.jpg`,
-      `${LSV}/sbv-starfish-bedroom.jpg`,
-      `${LSV}/sbv-surf-room.jpg`,
-      `${LSV}/sbv-teal-bedroom.jpg`,
-      `${LSV}/sbv-game-room.jpg`,
-      `${LSV}/sbv-pool-deck.jpg`,
-      `${LSV}/sbv-pool-lounge.jpg`,
-    ],
+    heroImage: SOLTERRA_LOCAL[0],
+    images: [...SOLTERRA_LOCAL],
     amenities: [
       "Private Heated Pool & Spa",
       "Game Room",
@@ -94,21 +110,8 @@ export const properties: Property[] = [
     guests: 12,
     sqft: null,
     pricePerNight: "From $199/night",
-    heroImage: `${LSV}/ddv-pool.jpg`,
-    images: [
-      `${LSV}/ddv-living-room.jpg`,
-      `${LSV}/ddv-living-kitchen.jpg`,
-      `${LSV}/ddv-kitchen.jpg`,
-      `${LSV}/ddv-dining-table.jpg`,
-      `${LSV}/ddv-master-bedroom.jpg`,
-      `${LSV}/ddv-master-king-pink.jpg`,
-      `${LSV}/ddv-mickey-bedroom.jpg`,
-      `${LSV}/ddv-nautical-twins.jpg`,
-      `${LSV}/ddv-theater.jpg`,
-      `${LSV}/ddv-game-room.jpg`,
-      `${LSV}/ddv-pool-deck.jpg`,
-      `${LSV}/ddv-pool-loungers.jpg`,
-    ],
+    heroImage: CHAMPIONSGATE_LOCAL[0],
+    images: [...CHAMPIONSGATE_LOCAL],
     amenities: [
       "Private Heated Pool & Spa",
       "Home Theater Room",
