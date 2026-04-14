@@ -17,6 +17,7 @@ export interface Property {
     phone: string;
     email: string;
   };
+  pricePerNight?: string;
 }
 
 const SOLTERRA_IMAGES = [
@@ -125,6 +126,7 @@ export const properties: Property[] = [
     bathrooms: 5,
     guests: 12,
     sqft: 3300,
+    pricePerNight: "From $199/night",
     heroImage: SOLTERRA_IMAGES[0],
     images: [...SOLTERRA_IMAGES],
     amenities: [
@@ -164,6 +166,7 @@ export const properties: Property[] = [
     bathrooms: 5,
     guests: 12,
     sqft: null,
+    pricePerNight: "From $199/night",
     heroImage: CHAMPIONSGATE_IMAGES[0],
     images: [...CHAMPIONSGATE_IMAGES],
     amenities: [
