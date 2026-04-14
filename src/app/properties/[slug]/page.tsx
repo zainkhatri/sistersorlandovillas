@@ -18,10 +18,10 @@ export async function generateMetadata({
   if (!property) return {};
 
   return {
-    title: `${property.name} | SisterOrlandoVillas`,
+    title: `${property.name} | Sisters Orlando Villas`,
     description: property.description,
     openGraph: {
-      title: `${property.name} | SisterOrlandoVillas`,
+      title: `${property.name} | Sisters Orlando Villas`,
       description: property.description,
       images: [{ url: property.heroImage, width: 1200, height: 630 }],
     },
@@ -185,17 +185,19 @@ export default async function PropertyPage({
                   Check Availability
                 </Link>
                 <a
-                  href={`tel:${property.contact.phone}`}
+                  href={`tel:+${property.contact.phone.replace(/\D/g, "")}`}
                   className="block w-full rounded-full border-2 border-navy/20 py-3.5 text-center text-sm font-semibold text-navy transition-colors hover:border-navy hover:bg-navy hover:text-white"
                 >
                   Call {property.contact.phone}
                 </a>
-                <a
-                  href={`mailto:${property.contact.email}`}
-                  className="block w-full text-center text-sm text-gray-500 underline hover:text-navy"
-                >
-                  {property.contact.email}
-                </a>
+                {property.contact.email && (
+                  <a
+                    href={`mailto:${property.contact.email}`}
+                    className="block w-full text-center text-sm text-gray-500 underline hover:text-navy"
+                  >
+                    {property.contact.email}
+                  </a>
+                )}
               </div>
 
               <hr className="my-6 border-sand-200" />

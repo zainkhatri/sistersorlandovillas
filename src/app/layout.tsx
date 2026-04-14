@@ -15,11 +15,11 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "SisterOrlandoVillas | Luxury Vacation Rentals Near Disney World",
+  title: "Sisters Orlando Villas | Luxury Vacation Rentals Near Disney World",
   description:
     "Book direct and save on luxury vacation villas near Walt Disney World. Private pools, game rooms, themed bedrooms, and resort amenities. 4-6 bedroom homes sleeping up to 12 guests.",
   openGraph: {
-    title: "SisterOrlandoVillas | Luxury Vacation Rentals Near Disney World",
+    title: "Sisters Orlando Villas | Luxury Vacation Rentals Near Disney World",
     description:
       "Luxury vacation villas with private pools near Disney World. Book direct and save. 4-6 bedrooms, game rooms, resort amenities.",
     type: "website",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "SisterOrlandoVillas | Luxury Vacation Rentals Near Disney World",
+    title: "Sisters Orlando Villas | Luxury Vacation Rentals Near Disney World",
     description:
       "Luxury vacation villas with private pools near Disney World. Book direct and save.",
   },

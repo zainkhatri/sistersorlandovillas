@@ -53,8 +53,8 @@ export default function Footer() {
               <li>Solterra Resort, Davenport, FL</li>
               <li>ChampionsGate Resort, Davenport, FL</li>
               <li className="pt-2">
-                <a href="tel:+18638625558" className="hover:text-gold-light">
-                  +1 (863) 862-5558
+                <a href="tel:+15555550100" className="hover:text-gold-light">
+                  +1 (555) 555-0100
                 </a>
               </li>
             </ul>
@@ -62,7 +62,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-12 border-t border-white/30 pt-8 text-center text-xs text-white/80">
-          &copy; {new Date().getFullYear()} SisterOrlandoVillas. All rights reserved.
+          &copy; {new Date().getFullYear()} Sisters Orlando Villas. All rights reserved.
         </div>
       </div>
     </footer>

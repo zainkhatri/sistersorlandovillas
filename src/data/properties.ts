@@ -15,7 +15,7 @@ export interface Property {
   nearDisney: string;
   contact: {
     phone: string;
-    email: string;
+    email?: string;
   };
   pricePerNight?: string;
 }
@@ -151,8 +151,7 @@ export const properties: Property[] = [
     ],
     nearDisney: "20 minutes from Walt Disney World",
     contact: {
-      phone: "+1-863-862-5558",
-      email: "devon@luxurysolterravillas.com",
+      phone: "+1 (555) 555-0100",
     },
   },
   {
@@ -191,8 +190,7 @@ export const properties: Property[] = [
     ],
     nearDisney: "20 minutes from Walt Disney World",
     contact: {
-      phone: "+1-863-862-5558",
-      email: "devon@luxurysolterravillas.com",
+      phone: "+1 (555) 555-0100",
     },
   },
 ];
