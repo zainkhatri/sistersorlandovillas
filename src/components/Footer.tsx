@@ -1,13 +1,14 @@
 import Link from "next/link";
+import BrandWordmark from "@/components/BrandWordmark";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#5DA9E9] text-white">
+    <footer className="bg-navy text-white">
       <div className="mx-auto max-w-7xl px-6 py-16">
         <div className="grid gap-12 md:grid-cols-3">
           <div>
-            <h3 className="text-xl font-bold text-white">
-              SisterOrlando<span className="text-[#8A6B2E]">Villas</span>
+            <h3 className="text-white">
+              <BrandWordmark className="text-xl" />
             </h3>
             <p className="mt-4 text-sm leading-relaxed text-white/90">
               Luxury vacation villas near Walt Disney World. Book direct and
@@ -19,27 +20,27 @@ export default function Footer() {
             <h4 className="font-semibold text-white">Quick Links</h4>
             <ul className="mt-4 space-y-2 text-sm">
               <li>
-                <Link href="/#properties" className="hover:text-[#8A6B2E]">
+                <Link href="/#properties" className="hover:text-gold-light">
                   Our Properties
                 </Link>
               </li>
               <li>
-                <Link href="/#reviews" className="hover:text-[#8A6B2E]">
+                <Link href="/#reviews" className="hover:text-gold-light">
                   Reviews
                 </Link>
               </li>
               <li>
-                <Link href="/book" className="hover:text-[#8A6B2E]">
+                <Link href="/book" className="hover:text-gold-light">
                   Book a Stay
                 </Link>
               </li>
               <li>
-                <Link href="/#about" className="hover:text-[#8A6B2E]">
+                <Link href="/#about" className="hover:text-gold-light">
                   About Us
                 </Link>
               </li>
               <li>
-                <Link href="/#contact" className="hover:text-[#8A6B2E]">
+                <Link href="/#contact" className="hover:text-gold-light">
                   Contact
                 </Link>
               </li>
@@ -52,7 +53,7 @@ export default function Footer() {
               <li>Solterra Resort, Davenport, FL</li>
               <li>ChampionsGate Resort, Davenport, FL</li>
               <li className="pt-2">
-                <a href="tel:+18638625558" className="hover:text-[#8A6B2E]">
+                <a href="tel:+18638625558" className="hover:text-gold-light">
                   +1 (863) 862-5558
                 </a>
               </li>

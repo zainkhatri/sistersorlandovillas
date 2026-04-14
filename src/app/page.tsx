@@ -9,8 +9,8 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative h-screen min-h-[600px]">
         <Image
-          src="/images/hero-universal-orlando.jpg"
-          alt="Universal Orlando Resort — Universal globe, lagoon, and Islands of Adventure at sunset"
+          src={properties[0].heroImage}
+          alt="Luxury Orlando vacation villa with private pool at Solterra Resort, minutes from Walt Disney World"
           fill
           className="object-cover object-center [transform:translateZ(0)]"
           priority
@@ -55,7 +55,7 @@ export default function Home() {
       </section>
 
       {/* Trust Bar */}
-      <section className="bg-[#5DA9E9] py-6">
+      <section className="border-t border-gold/35 bg-navy py-6">
         <div className="mx-auto flex max-w-5xl flex-wrap items-center justify-center gap-8 px-6 text-sm text-white">
           <span className="flex items-center gap-2">
             <StarIcon />
@@ -267,7 +267,7 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="bg-[#5DA9E9] py-20">
+      <section id="contact" className="bg-navy py-20">
         <div className="mx-auto max-w-3xl px-6 text-center">
           <p className="text-sm font-medium uppercase tracking-widest text-[#8A6B2E]">
             Get In Touch
